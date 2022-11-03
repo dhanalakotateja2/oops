@@ -1,0 +1,288 @@
+
+
+###experiment 1
+
+import java.util.*;
+public class Air {
+public static void main(String[]args){
+Scanner sc =new Scanner(System.in);
+h : while(true){
+System.out.println("Press 1 for Know my balance");
+System.out.println("Press 2 for Know my validity date");
+System.out.println("Press 3 for Know number of free calls available");
+System.out.println("Press 4for more");
+
+System.out.println("make your choice");
+int firstchoice  =sc.nextInt();
+switch (firstchoice){
+case 1:
+System.out.println("Know my balance");
+break;
+case 2:
+System.out.println(" Know my validity date");
+break;
+case 3:
+System.out.println("Know number of free calls available");
+break;
+case 4:
+while(true){
+System.out.println("Press 1 for prepaid bill request ");
+System.out.println("Press 2 for customer preferences");
+System.out.println("press 3 for GPRS activation");
+System.out.println("Press 4 for special message offers");
+System.out.println("Press 5 for special GPRS offers");
+System.out.println("Press 6 for 3G activation");
+
+System.out.println("make your choice");
+int secondchoice  =sc.nextInt();
+switch (secondchoice){
+case 1:
+System.out.println(" prepaid bill request ");
+break;
+case 2:
+System.out.println(" customer preferences");
+break;
+case 3:
+System.out.println(" GPRS activation");
+break;
+case 4:
+System.out.println("special message offers ");
+break;
+case 5: System.out.println("special GPRS offers ");
+break;
+case 6:
+System.out.println("3G activation ");
+break;
+case 7:
+System.out.println(" Go back to previous menu");
+continue h;
+
+}
+
+
+
+
+}
+default:
+System.exit(1);
+
+}
+
+}
+
+ 
+ 
+ 
+
+}
+}
+
+
+###experiment 2
+
+import java.util.*;
+public class Rectangle {
+    private
+    int length;
+    int breadth;
+    public
+        void display(){
+        System.out.println("length is :"+ length);
+        System.out.println("breadth is :"+ breadth);
+    }
+    public void valueinput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter length and breadth");
+        length = sc.nextInt();
+        breadth= sc.nextInt();
+    }
+    public void area(){
+        System.out.println("Area is:"+length*breadth);}
+        public void perim(){
+            System.out.println("Perimeter is:"+2*(length+breadth));
+
+        }
+
+}
+public class Rectangle_check {
+    public static void main(String[]args){
+        Rectangle ac=new Rectangle();
+                ac.display();
+                ac.valueinput();
+                ac.area();
+                ac.perim();
+    }
+}
+
+
+###experiment 3
+class animal
+{
+  void walk()
+  {
+    System.out.println("walking");
+  }
+}
+class bird extends animal
+{
+  void fly()
+  {  
+    System.out.println("Flying");
+  }
+}
+class exp3
+{
+  public static void main(String args[])
+  {
+    animal A = new animal();
+    A.walk();
+    A.fly();
+  }
+}
+
+###experiment 4
+
+
+
+###experiment 5
+class Animal {
+	void walk() {
+		System.out.println("WALKING");
+	}
+}
+class Bird extends Animal{
+	void fly() {
+		System.out.println("FLYING");
+	}
+}
+
+class Inheritance{
+	public static void main(String args[]) {
+		Bird b=new Bird();
+		b.walk();
+		b.fly();
+	}
+			
+		
+}
+
+
+###experiment 6
+import java .util.Scanner;
+class Arthematic {
+	void add() {
+        int a,b;
+        Scanner sc = new Scanner (System.in);
+        a= sc.nextInt();
+        b= sc.nextInt();
+        System.out.println("sum is: "+ (a+b));
+
+        }
+        }
+class Adder extends Arthematic {
+    public static void main(String[] args) {
+        Adder s=new Adder();
+        s.add ();
+ 
+    }
+}
+
+ 
+###experiment 7
+ 
+  class Sports {
+	 String getName() {
+		 return "sarren sports";
+		 
+	 }
+	 
+	 void getNumberOfTeamMembers() {
+		 System.out.println("Each team has 10 players in " + getName());
+	 }
+}
+
+ class Soccer extends Sports {
+	 String getName() {
+		 return "mrf sports";
+		 
+	 }
+	 void getNumberOfTeamMembers() {
+		 System.out.println("Each team has 18 players in " + getName());
+	 }
+	 
+ }
+ 
+ class Solution{
+	 Sports s1=new Sports();
+	 Soccer s2 =new Soccer();
+	 System.out.println(s1.getName());
+	 s1.getNumberOfTeamMembers();
+	 System.out.println(s2.getName());
+	 s2.getNumberOfTeamMembers();
+	 
+	 
+	 
+	 
+	 
+ }
+ 
+ 
+ 
+###experiment 12
+ import java.util.*;
+
+public class exp12
+{
+public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+
+int a,b;
+System.out.println("enter two numbers: ");
+a = in.nextInt();
+b = in.nextInt();
+
+try {
+   System.out.println(a/b);
+}
+catch(Exception e){
+   System.out.println(e.getMessage());
+}
+
+}
+}
+ 
+ 
+###experiment 13
+ import java.util.*;
+
+class myexp extends Exception{
+    myexp(){
+        super();
+    }
+}
+void validate(int age) throws myexp
+{
+   if(age<=18){
+   try{
+       throw new myexp();
+   }
+   else
+   {
+     System.out.println("Eligible to vote!");
+   }
+  }
+ }
+public class exp14
+{
+public static void main(String[] args) {
+
+Scanner in = new Scanner(System.in);
+System.out.println("enter age: ");
+int age = in.nextInt();
+        try{
+            validate();
+          }
+  }
+}
+
+
