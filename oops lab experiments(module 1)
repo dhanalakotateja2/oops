@@ -116,32 +116,60 @@ public class Rectangle_check {
 
 
 ###experiment 3
-class animal
-{
-  void walk()
-  {
-    System.out.println("walking");
-  }
-}
-class bird extends animal
-{
-  void fly()
-  {  
-    System.out.println("Flying");
-  }
-}
-class exp3
-{
-  public static void main(String args[])
-  {
-    animal A = new animal();
-    A.walk();
-    A.fly();
-  }
-}
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+	public class tokens1 {
+	    
+	class Animal {
+		void walk(){
+	public static void main(String[] args) {
+	        Scanner sc=new Scanner(System.in);
+	        String j=sc.nextLine();
+	        int k=0;
+	        StringTokenizer st=new StringTokenizer(j," ");
+	        while(st.hasMoreTokens()){
+	            int l=0;
+	            l= Integer.parseInt(st.nextToken());
+	            System.out.println(l);
+	            k+=l;
+	        }
+	        System.out.println("sum of numbers:"+k);
+	    }
+	}
+
 
 ###experiment 4
 
+4.1
+import java.util.*;
+public class tokens2{
+    public static void main(String[] args) {
+        Scanner a=new Scanner(System.in);
+        String b=a.nextLine();
+        StringTokenizer c=new StringTokenizer(b,",:! @#%^&*$" );
+        while(c.hasMoreTokens()){
+            System.out.println(c.nextToken());
+        }
+    }
+ }
+
+4.2
+import java.util.Scanner;
+import java.util.StringTokenizer;
+public class token2_2{
+    public static void main(String[] args) {
+        Scanner a=new Scanner(System.in);
+        String b=a.nextLine();
+        Scanner sc=new Scanner(System.in);
+        String j=sc.nextLine();
+        String i=sc.nextLine();
+        StringTokenizer st=new StringTokenizer(j,i);
+        while(st.hasMoreTokens()){
+            System.out.println(st.nextToken());
+        }
+    }
+ }
 
 
 ###experiment 5
@@ -225,6 +253,140 @@ class Adder extends Arthematic {
 	 
 	 
  }
+ 
+ ###experiment 8
+ 
+ 8.1
+package abstact;
+public abstract class Abstractclass {
+	 abstract int noofsides();
+}
+
+8.2
+package abstact;
+
+public class Trapezoid extends Abstractclass{
+	public int noofsides()
+	{
+		return 4;
+	}
+
+}
+
+8.3
+package abstact;
+public class Triangle extends Abstractclass{
+	public int noofsides()
+	{
+		return 3;
+	}
+
+}
+
+8.4
+package abstact;
+public class Hexagon extends Abstractclass{
+	public int noofsides()
+	{
+		return 6;
+	}
+
+/main class/
+public static void main(String[] args) {
+	Trapezoid a=new Trapezoid();
+    System.out.println(a.noofsides());
+	Triangle b=new Triangle();
+	System.out.println(b.noofsides());
+	Hexagon c=new Hexagon();
+    System.out.println(c.noofsides());
+    }
+ }
+ 
+ ###experiment 9
+ 
+ 9.1
+
+public interface aad {
+	 int divisor_sum(int n);
+
+}
+
+9.2
+
+public class MyCalculator implements aad{
+	public int divisor_sum(int n) {
+		int sum=0;
+		for(int i=1;i<=n;i++) {
+			if(n%i==0) {
+				sum=sum+i;
+			}
+		}
+		return sum;
+	}
+
+}
+
+9.3
+import java.util.Scanner;
+public class checking {
+	public static void main(String[] args) {
+   Scanner sc=new Scanner(System.in);
+   System.out.println("enter a number:");
+   int num=sc.nextInt();
+   MyCalculator c=new MyCalculator ();
+   System.out.println(c.divisor_sum(num));
+   
+        }
+}
+
+###experiment 10
+
+10.1
+package package1;
+
+public class class1 {
+	public void name() {
+		System.out.println("welcome to package1");
+	}
+
+}
+
+10.2
+package package2;
+import package1.class1;
+public class class2 {
+	public static void main(String[] args) {
+	class1 a=new class1();
+	a.name();
+	
+	}
+}
+
+
+###experiment 11
+
+11
+import java.util.*;
+
+public class divison {
+	public static void main(String args[]){
+		int a;
+		int b;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a:");
+		a=sc.nextInt();
+		System.out.println("enter b:");
+		b=sc.nextInt();
+		try {
+			System.out.println(a/b);
+			
+		}
+		catch(ArithmeticException e) {
+			System.out.println("number cannot be divided by zero");
+		}
+     }
+
+}
  
  
  
